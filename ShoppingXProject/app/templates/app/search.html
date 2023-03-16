@@ -1,0 +1,22 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Customer Registration{% endblock title %}
+{% block main-content %}
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  {% for x in product %}
+  <a href="" class="btn">
+    <div class="col">
+    <div class="card">
+      <img src="{{x.product_image.url}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{x.title}}</h5>
+        <p class="card-text">{{x.discounted}} </p>
+      </div>
+    </div>
+  </div>
+  </a>
+  {% endfor %}
+</div>
+
+
+{% endblock main-content %}
